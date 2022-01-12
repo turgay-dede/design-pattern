@@ -1,12 +1,12 @@
 package com.creational.builder;
 
 public class User {
-    private String name;
-    private String surname;
+    private final String name;
+    private final String surname;
 
-    private int age;
-    private String phoneNumber;
-    private String address;
+    private final int age;
+    private final String phoneNumber;
+    private final String address;
 
     public User(Builder builder) {
         this.name =builder.name;
@@ -48,8 +48,8 @@ public class User {
     }
 
     public static class Builder{
-        private String name;
-        private String surname;
+        private final String name;
+        private final String surname;
 
         private int age;
         private String phoneNumber;
