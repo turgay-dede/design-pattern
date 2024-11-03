@@ -1,4 +1,4 @@
-package com.turgaydede.behavioral.strategy;
+package com.turgaydede.behavioral.strategy.file;
 
 public class Main {
     public static void main(String[] args) {

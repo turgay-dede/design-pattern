@@ -1,4 +1,4 @@
-package com.turgaydede.behavioral.strategy;
+package com.turgaydede.behavioral.strategy.file;
 
 public class ImageFileProcessing implements FileProcessingStrategy {
     @Override
