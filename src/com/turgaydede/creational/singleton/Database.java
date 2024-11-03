@@ -1,6 +1,4 @@
-package com.creational.singleton;
-
-import javax.xml.crypto.Data;
+package com.turgaydede.creational.singleton;
 
 public class Database {
     private static volatile Database database; //volatile: memory de değiştikten sonra

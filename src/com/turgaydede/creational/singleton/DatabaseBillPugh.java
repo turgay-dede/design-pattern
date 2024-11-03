@@ -1,4 +1,4 @@
-package com.creational.singleton;
+package com.turgaydede.creational.singleton;
 
 public class DatabaseBillPugh {
     private DatabaseBillPugh(){} // reflection ile kırılabilir

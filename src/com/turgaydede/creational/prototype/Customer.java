@@ -1,4 +1,4 @@
-package com.creational.prototype;
+package com.turgaydede.creational.prototype;
 
 public class Customer {
     private String name;

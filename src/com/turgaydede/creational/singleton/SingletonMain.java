@@ -1,4 +1,4 @@
-package com.creational.singleton;
+package com.turgaydede.creational.singleton;
 
 import java.lang.reflect.Constructor;
 

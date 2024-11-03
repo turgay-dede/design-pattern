@@ -1,4 +1,6 @@
-package com.creational.prototype;
+package com.turgaydede.creational.prototype.bloch;
+
+import com.turgaydede.creational.prototype.Customer;
 
 public class Account implements Cloneable {
     protected String iban;
@@ -10,7 +12,11 @@ public class Account implements Cloneable {
     private boolean openToPayment;
     private boolean openToTransfer;
 
-    public Account(String iban, double balance, double credit, Customer owner, boolean openToWithdraw, boolean openToPayment, boolean openToTransfer) {
+    private final static Account normalPrototype = new Account("123456", 500, 500, null, true, true, true);
+    private final static Account negativePrototype = new Account("123456", 0, 500, null, true, true, false);
+    private final static Account frozenPrototype = new Account("123456", -500, 500, null, false, false, false);
+
+    private Account(String iban, double balance, double credit, Customer owner, boolean openToWithdraw, boolean openToPayment, boolean openToTransfer) {
         this.iban = iban;
         this.balance = balance;
         this.credit = credit;
@@ -79,10 +85,10 @@ public class Account implements Cloneable {
     @Override
     public String toString() {
         return "Account{" +
-                "iban='" + iban + '\'' +
+                "owner=" + owner +
+                ", iban='" + iban + '\'' +
                 ", balance=" + balance +
                 ", credit=" + credit +
-                ", owner=" + owner +
                 ", openToWithdraw=" + openToWithdraw +
                 ", openToPayment=" + openToPayment +
                 ", openToTransfer=" + openToTransfer +
@@ -90,7 +96,7 @@ public class Account implements Cloneable {
     }
 
     @Override
-    protected Object clone(){
+    protected Account clone() {
         Account account = null;
         try {
             account = (Account) super.clone();
@@ -99,4 +105,29 @@ public class Account implements Cloneable {
         }
         return account;
     }
+
+    public static Account createNormalAccount(Customer owner, double balance, String iban) {
+        Account account = normalPrototype.clone();
+        account.setOwner(owner);
+        account.setBalance(balance);
+        account.setIban(iban);
+        return account;
+    }
+
+    public static Account createNegativeAccount(Customer owner, double balance, String iban) {
+        Account account = negativePrototype.clone();
+        account.setOwner(owner);
+        account.setBalance(balance);
+        account.setIban(iban);
+        return account;
+    }
+
+    public static Account createFrozenAccount(Customer owner, double balance, String iban) {
+        Account account = frozenPrototype.clone();
+        account.setOwner(owner);
+        account.setBalance(balance);
+        account.setIban(iban);
+        return account;
+    }
+
 }

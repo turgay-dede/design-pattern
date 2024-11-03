@@ -1,4 +1,4 @@
-package com.creational.prototype;
+package com.turgaydede.creational.prototype;
 
 public interface FactoryService {
     Account createNormalAccount();

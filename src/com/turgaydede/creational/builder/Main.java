@@ -1,4 +1,4 @@
-package com.creational.builder;
+package com.turgaydede.creational.builder;
 
 public class Main {
     public static void main(String[] args) {
