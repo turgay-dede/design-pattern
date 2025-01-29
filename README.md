@@ -1,4 +1,4 @@
-# 📐 Davranışsal Tasarım Desenleri
+# 📐 Davranışsal Tasarım Desenleri (Behavioral Design Patterns)
 
 ---
 
@@ -61,6 +61,50 @@
 - **Nasıl Kullanılır?** Her durumu bağımsız bir sınıf olarak tanımlayın, nesne durum değişiminde farklı davranışlar sergilesin.
 
 ---
+
+# 📏 Yapısal Tasarım Desenleri (Structural Design Patterns)
+
+---
+
+### 🧩 Adapter
+- **Ne Zaman?** Uyumsuz bir arayüzü mevcut bir sisteme entegre etmeniz gerektiğinde.
+- **Nasıl Kullanılır?** Eski sistemle yeni arayüzleri birleştirerek uyumluluk sağlamak için araya bir "adaptör" ekleyin.
+
+---
+
+### 🏗️ Bridge
+- **Ne Zaman?** Soyutlama ve uygulamayı birbirinden ayırarak bağımsız olarak geliştirilebilecek bir yapı kurmak istediğinizde.
+- **Nasıl Kullanılır?** Soyutlamayı (örneğin, hesap türleri) uygulamadan (örneğin, ödeme yöntemleri) ayırarak her ikisini de esnekçe genişletebilirsiniz.
+
+---
+
+### 🎨 Composite
+- **Ne Zaman?** Nesneleri ağaç yapısında hiyerarşik olarak düzenlemek ve alt bileşenlerle ana bileşenleri tek bir nesneymiş gibi işlem yapmak gerektiğinde.
+- **Nasıl Kullanılır?** Yaprak nesneleri ve bileşenleri bir araya getirip, tüm ağaç yapısına toplu işlemler uygulamak için kullanın.
+
+---
+
+### 🚪 Facade
+- **Ne Zaman?** Karmaşık bir sistemde alt bileşenleri gizleyerek, istemciler için basit bir arayüz sağlamak istediğinizde.
+- **Nasıl Kullanılır?** Sistemin ana işlevlerini tek bir sınıf üzerinden basitleştirerek erişimi kolaylaştırın.
+
+---
+
+### 🔌 Proxy
+- **Ne Zaman?** Bir nesneye erişimi kontrol etme, bu nesneye erişim öncesinde/sonrasında ek işlemler yapma veya maliyetli işlemleri optimize etme ihtiyacı olduğunda.
+- **Nasıl Kullanılır?** Gerçek nesnenin yerine geçecek bir "proxy" sınıfı ekleyerek güvenlik, erişim kontrolü veya önbellekleme gibi işlevleri yönetin.
+
+---
+
+### 🌉 Decorator
+- **Ne Zaman?** Nesnelere ek özellikler eklemek, ancak bu nesnelerin temel yapısını değiştirmek istemediğinizde.
+- **Nasıl Kullanılır?** Temel bir nesneye dinamik olarak işlevler eklemek için dekoratör sınıflar kullanın.
+
+---
+
+### 🔗 Flyweight
+- **Ne Zaman?** Büyük sayıda nesne oluşturmanız gerektiğinde, aynı özellikleri taşıyan nesneleri tekrar kullanarak hafızayı optimize etme ihtiyacı olduğunda.
+- **Nasıl Kullanılır?** Paylaşılan durumları tek bir nesnede saklayın, her seferinde yeni nesne oluşturmadan belleği koruyun.
 
 
 
