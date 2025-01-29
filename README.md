@@ -107,4 +107,35 @@
 - **Nasıl Kullanılır?** Paylaşılan durumları tek bir nesnede saklayın, her seferinde yeni nesne oluşturmadan belleği koruyun.
 
 
+# 🎭 Yaratımsal Tasarım Desenleri (Creational Design Patterns)
+
+---
+
+### 🎭 Singleton
+- **Ne Zaman?** Uygulama içinde **yalnızca bir adet** nesne oluşturulması gerektiğinde (örn. veritabanı bağlantısı, konfigürasyon yöneticisi, log yöneticisi gibi).
+- **Nasıl Kullanılır?** **Statik bir değişken** ile sınıfın tek bir örneğini tutun ve **private constructor** kullanarak doğrudan nesne oluşturulmasını engelleyin.
+
+---
+
+### 🏭 Factory
+- **Ne Zaman?** Nesne oluşturma sürecini merkezi bir sınıf üzerinden yönetmek ve istemcinin doğrudan nesne oluşturmasını engellemek istediğinizde.
+- **Nasıl Kullanılır?** Bir **Factory** sınıfı oluşturarak, nesne oluşturma işlemlerini soyutlayın ve istemcinin sadece belirli girişlerle uygun nesneyi almasını sağlayın.
+
+---
+
+### 🏭 Abstract Factory
+- **Ne Zaman?** Birbiriyle ilişkili nesne gruplarını oluşturmanız gerektiğinde ve bu nesnelerin belirli bir aileye ait olması gerektiğinde.
+- **Nasıl Kullanılır?** Bir **Abstract Factory** sınıfı oluşturup, farklı nesne aileleri için somut fabrikalar sağlayarak istemcinin nesne oluşturma detaylarını bilmeden kullanmasını sağlayın.
+
+---
+
+### 🔄 Prototype
+- **Ne Zaman?** Yeni bir nesne oluşturmak yerine, mevcut bir nesnenin **kopyasını** oluşturmanız gerektiğinde.
+- **Nasıl Kullanılır?** **Cloneable** arayüzünü kullanarak, nesnelerin kopyalanmasını sağlayın. Bu, nesne oluşturma maliyetini düşürerek performansı artırır.
+
+---
+
+### 🏗️ Builder
+- **Ne Zaman?** Kompleks nesneler oluştururken, nesne oluşturma sürecini esnek ve daha okunabilir hale getirmek istediğinizde.
+- **Nasıl Kullanılır?** **Builder sınıfları** oluşturarak, nesnenin adım adım oluşturulmasını sağlayın ve gereksiz constructor aşırı yüklemelerinden kaçının.
 
